@@ -1,5 +1,6 @@
 fs = require('fs');
-const profile = process.argv[2] || 'iamtech';
+const appName = process.argv[2]; 
+const profile = process.argv[3] || 'iamtech';
 
 const deployStaging = 'npm run build:staging && aws s3 --profile '+profile+' sync build/ s3://app-'+appName+'-staging';
 

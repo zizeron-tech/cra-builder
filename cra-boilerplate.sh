@@ -21,7 +21,7 @@ rm ./environments.js
 
 # Download and execute devops creation script
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/scripts/devops.js
-node ./devops.js $2
+node ./devops.js $1 $2
 rm ./devops.js
 
 # Download enviroment files
