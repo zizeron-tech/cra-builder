@@ -1,0 +1,26 @@
+const appName = process.argv[2];
+const readPackageJsonPath = '../'+appName+'/package.json'
+const writePackageJsonPath = './'+appName+'/package.json'
+const packageJson = require(readPackageJsonPath);
+
+const reactScripts = {
+  'start:local': 'env-cmd -f .env.local react-scripts start',
+  'start:staging': 'env-cmd -f .env.staging react-scripts start',
+  'start:prod': 'env-cmd -f .env.prod react-scripts start',
+  'build:local': 'env-cmd -f .env.local react-scripts build',
+  'build:staging': 'env-cmd -f .env.staging react-scripts build',
+  'build:prod': 'env-cmd -f .env.prod react-scripts build',
+  test: 'react-scripts test',
+  eject: 'react-scripts eject'
+}
+
+packageJson.scripts = reactScripts;
+
+fs = require('fs');
+fs.writeFile(writePackageJsonPath, JSON.stringify(packageJson, null, 2), function(error) {
+  if (error) {
+    console.log("error", error)
+  } else {
+    console.log("packageJson written");
+  }  
+});
