@@ -1,7 +1,7 @@
-const appName = process.argv[2];
-const readPackageJsonPath = '../'+appName+'/package.json'
-const writePackageJsonPath = './'+appName+'/package.json'
+const readPackageJsonPath = './package.json'
+const writePackageJsonPath = './package.json'
 const packageJson = require(readPackageJsonPath);
+console.log("packageJson", packageJson)
 
 const reactScripts = {
   'start:local': 'env-cmd -f .env.local react-scripts start',
@@ -16,7 +16,7 @@ const reactScripts = {
 
 packageJson.scripts = reactScripts;
 
-fs = require('fs');
+const fs = require('fs');
 fs.writeFile(writePackageJsonPath, JSON.stringify(packageJson, null, 2), function(error) {
   if (error) {
     console.log("error", error)

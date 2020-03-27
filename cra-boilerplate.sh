@@ -1,5 +1,5 @@
 # Create react app with last version
-npx create-react-app $1
+npx create-react-app $1 $2
 
 # Remove unnecessary files
 rm -rf $1/src/App.js
@@ -16,12 +16,12 @@ npm install --save-dev node-sass env-cmd
 
 # Download and execute package.json overrides for run and build scripts
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/scripts/environments.js
-node ./environments.js $1
+node ./environments.js
 rm ./environments.js
 
 # Download and execute devops creation script
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/scripts/devops.js
-node ./devops.js $1
+node ./devops.js $2
 rm ./devops.js
 
 # Download enviroment files
