@@ -1,7 +1,6 @@
 const readPackageJsonPath = './package.json'
 const writePackageJsonPath = './package.json'
 const packageJson = require(readPackageJsonPath);
-console.log("packageJson", packageJson)
 
 const reactScripts = {
   'start:local': 'env-cmd -f .env.local react-scripts start',
