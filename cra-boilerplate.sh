@@ -12,7 +12,7 @@ rm -rf $1/src/index.css
 # Install packages
 cd $1
 npm install --save react-router-dom redux react-redux
-npm install --save-dev node-sass env-cmd
+npm install --save-dev styled-components env-cmd
 
 # Download and execute package.json overrides for run and build scripts
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/scripts/environments.js
