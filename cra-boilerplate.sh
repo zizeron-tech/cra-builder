@@ -15,45 +15,45 @@ npm install --save react-router-dom
 npm install --save-dev styled-components env-cmd
 
 # Download and execute package.json overrides for run and build scripts
-curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/scripts/environments.js
+curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/scripts/environments.js
 node ./environments.js
 rm ./environments.js
 
 # Download and execute devops creation script
-curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/scripts/devops.js
+curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/scripts/devops.js
 node ./devops.js $1 $2
 rm ./devops.js
 
 # Download enviroment files
-curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/enviroments/.env.local
-curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/enviroments/.env.staging
-curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/enviroments/.env.prod
+curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/enviroments/.env.local
+curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/enviroments/.env.staging
+curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/enviroments/.env.prod
 
 # Download and copy app template
 cd src
 # - components/layout/Footer
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Footer/index.js -o ./components/layout/Footer/index.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Footer/Footer.js -o ./components/layout/Footer/Footer.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/components/layout/Footer/index.js -o ./components/layout/Footer/index.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/components/layout/Footer/Footer.js -o ./components/layout/Footer/Footer.js
 # - components/layout/Header
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Header/index.js -o ./components/layout/Header/index.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Header/Header.js -o ./components/layout/Header/Header.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/components/layout/Header/index.js -o ./components/layout/Header/index.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/components/layout/Header/Header.js -o ./components/layout/Header/Header.js
 # - components/layout/Layout
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Layout/index.js -o ./components/layout/Layout/index.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Layout/Layout.js -o ./components/layout/Layout/Layout.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/components/layout/Layout/index.js -o ./components/layout/Layout/index.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/components/layout/Layout/Layout.js -o ./components/layout/Layout/Layout.js
 # - pages/Home
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/pages/Home.js -o ./pages/Home.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/pages/Home.js -o ./pages/Home.js
 # - theme
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/globalStyle.js -o ./theme/globalStyle.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/theme/globalStyle.js -o ./theme/globalStyle.js
 # - scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_animations.scss -o ./scss/abstracts/_animations.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_helpers.scss -o ./scss/abstracts/_helpers.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_mixins.scss -o ./scss/abstracts/_mixins.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_variables.scss -o ./scss/abstracts/_variables.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/index.scss -o ./scss/abstracts/index.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/base/_base.scss -o ./scss/base/_base.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/base/_reset.scss -o ./scss/base/_reset.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/base/index.scss -o ./scss/base/index.scss
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/scss/abstracts/_animations.scss -o ./scss/abstracts/_animations.scss
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/scss/abstracts/_helpers.scss -o ./scss/abstracts/_helpers.scss
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/scss/abstracts/_mixins.scss -o ./scss/abstracts/_mixins.scss
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/scss/abstracts/_variables.scss -o ./scss/abstracts/_variables.scss
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/scss/abstracts/index.scss -o ./scss/abstracts/index.scss
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/scss/base/_base.scss -o ./scss/base/_base.scss
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/scss/base/_reset.scss -o ./scss/base/_reset.scss
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/scss/base/index.scss -o ./scss/base/index.scss
 # - other
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/App.js -o ./App.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/index.js -o ./index.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/routes.js -o ./routes.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/App.js -o ./App.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/index.js -o ./index.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/routesComponent.js -o ./routesComponent.js

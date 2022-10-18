@@ -1,7 +1,7 @@
 import React from 'react';
 
 import GlobalStyle from './theme/globalStyle';
-import Routes from './routes';
+import RoutesComponent from './routesComponent';
 
 import './scss/base/index.scss';
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <GlobalStyle />
-      <Routes/>
+      <RoutesComponent/>
     </div>
   );
 }

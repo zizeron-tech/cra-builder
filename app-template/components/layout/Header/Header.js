@@ -6,9 +6,8 @@ const HeaderContainer = styled.header`
 `;
 
 const Header = () => {
-  const lang = useSelector(state => state.language.lang);
   return (
-    <HeaderContainer>Header: {lang}</HeaderContainer>
+    <HeaderContainer>Hi Header!</HeaderContainer>
   )
 }
  
