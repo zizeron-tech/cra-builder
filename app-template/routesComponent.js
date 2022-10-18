@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home'
 
-const Routes = () => {
+const RoutesComponent = () => {
   return (
     <Router>
       <Routes>
@@ -13,4 +13,4 @@ const Routes = () => {
   );
 }
  
-export default Routes;
+export default RoutesComponent;
