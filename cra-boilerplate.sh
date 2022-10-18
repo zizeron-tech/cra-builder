@@ -11,7 +11,7 @@ rm -rf $1/src/index.css
 
 # Install packages
 cd $1
-npm install --save react-router-dom redux react-redux
+npm install --save react-router-dom
 npm install --save-dev styled-components env-cmd
 
 # Download and execute package.json overrides for run and build scripts
@@ -45,10 +45,6 @@ curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builde
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Layout/Layout.scss -o ./components/layout/Layout/Layout.scss
 # - pages/Home
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/pages/Home.js -o ./pages/Home.js
-# - redux
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/redux/actions/languageActions.js -o ./redux/actions/languageActions.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/redux/reducers/index.js -o ./redux/reducers/index.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/redux/reducers/languageReducer.js -o ./redux/reducers/languageReducer.js
 # - scss
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_animations.scss -o ./scss/abstracts/_animations.scss
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_helpers.scss -o ./scss/abstracts/_helpers.scss
