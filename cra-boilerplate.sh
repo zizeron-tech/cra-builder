@@ -43,7 +43,7 @@ curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builde
 # - pages/Home
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/pages/Home.js -o ./pages/Home.js
 # - theme
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/globalStyles.js -o ./theme/globalStyles.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/globalStyle.js -o ./theme/globalStyle.js
 # - scss
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_animations.scss -o ./scss/abstracts/_animations.scss
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_helpers.scss -o ./scss/abstracts/_helpers.scss
