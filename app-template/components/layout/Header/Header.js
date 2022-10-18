@@ -1,11 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import './Header.scss';
+const HeaderContainer = styled.header`
+  // header's style
+`;
 
 const Header = () => {
   const lang = useSelector(state => state.language.lang);
   return (
-    <header>Header: {lang}</header>
+    <HeaderContainer>Header: {lang}</HeaderContainer>
   )
 }
  

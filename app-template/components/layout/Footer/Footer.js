@@ -1,14 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import './Footer.scss';
+const FooterContainer = styled.footer`
+  // footer's style
+`;
 
 const Footer = () => {
-  const dispatch = useDispatch();
 
   return (
-    <footer>
+    <FooterContainer>
       <div>Footer</div>
-    </footer>
+    </FooterContainer>
   )
 }
  

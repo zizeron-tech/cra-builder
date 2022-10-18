@@ -34,17 +34,16 @@ cd src
 # - components/layout/Footer
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Footer/index.js -o ./components/layout/Footer/index.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Footer/Footer.js -o ./components/layout/Footer/Footer.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Footer/Footer.scss -o ./components/layout/Footer/Footer.scss
 # - components/layout/Header
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Header/index.js -o ./components/layout/Header/index.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Header/Header.js -o ./components/layout/Header/Header.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Header/Header.scss -o ./components/layout/Header/Header.scss
 # - components/layout/Layout
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Layout/index.js -o ./components/layout/Layout/index.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Layout/Layout.js -o ./components/layout/Layout/Layout.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Layout/Layout.scss -o ./components/layout/Layout/Layout.scss
 # - pages/Home
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/pages/Home.js -o ./pages/Home.js
+# - theme
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/globalStyles.js -o ./theme/globalStyles.js
 # - scss
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_animations.scss -o ./scss/abstracts/_animations.scss
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_helpers.scss -o ./scss/abstracts/_helpers.scss

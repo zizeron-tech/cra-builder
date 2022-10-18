@@ -1,17 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Header from '../Header';
 import Footer from '../Footer';
 
-import './Layout.scss';
+const LayoutContainer = styled.div`
+  // layout's style
+`;
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <LayoutContainer>
       <Header/>
       {children}
       <Footer />
-    </div>
+    </LayoutContainer>
   )
 }
  
