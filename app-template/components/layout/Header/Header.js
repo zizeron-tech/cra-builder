@@ -1,12 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import styled from 'styled-components';
 
-import './Header.scss';
+import { H1 } from '../../ui/';
+
+const HeaderContainer = styled.header`
+  background-color: ${(props) => props.theme.colors.brand03};
+  // header's style
+`;
 
 const Header = () => {
-  const lang = useSelector(state => state.language.lang);
   return (
-    <header>Header: {lang}</header>
+    <HeaderContainer>
+      <H1>hola</H1>
+    </HeaderContainer>
   )
 }
  

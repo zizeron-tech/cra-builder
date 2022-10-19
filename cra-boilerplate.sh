@@ -11,8 +11,8 @@ rm -rf $1/src/index.css
 
 # Install packages
 cd $1
-npm install --save react-router-dom redux react-redux
-npm install --save-dev node-sass env-cmd
+npm install --save react-router-dom
+npm install --save-dev styled-components styled-system env-cmd
 
 # Download and execute package.json overrides for run and build scripts
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/scripts/environments.js
@@ -34,31 +34,50 @@ cd src
 # - components/layout/Footer
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Footer/index.js -o ./components/layout/Footer/index.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Footer/Footer.js -o ./components/layout/Footer/Footer.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Footer/Footer.scss -o ./components/layout/Footer/Footer.scss
 # - components/layout/Header
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Header/index.js -o ./components/layout/Header/index.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Header/Header.js -o ./components/layout/Header/Header.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Header/Header.scss -o ./components/layout/Header/Header.scss
 # - components/layout/Layout
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Layout/index.js -o ./components/layout/Layout/index.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Layout/Layout.js -o ./components/layout/Layout/Layout.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/layout/Layout/Layout.scss -o ./components/layout/Layout/Layout.scss
 # - pages/Home
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/pages/Home.js -o ./pages/Home.js
-# - redux
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/redux/actions/languageActions.js -o ./redux/actions/languageActions.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/redux/reducers/index.js -o ./redux/reducers/index.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/redux/reducers/languageReducer.js -o ./redux/reducers/languageReducer.js
-# - scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_animations.scss -o ./scss/abstracts/_animations.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_helpers.scss -o ./scss/abstracts/_helpers.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_mixins.scss -o ./scss/abstracts/_mixins.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/_variables.scss -o ./scss/abstracts/_variables.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/abstracts/index.scss -o ./scss/abstracts/index.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/base/_base.scss -o ./scss/base/_base.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/base/_reset.scss -o ./scss/base/_reset.scss
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/scss/base/index.scss -o ./scss/base/index.scss
+# - theme
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/globalStyle.js -o ./theme/globalStyle.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/helpers.js -o ./theme/helpers.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/mixins.js -o ./theme/mixins.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/responsiveness.js -o ./theme/responsiveness.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/Theme.js -o ./theme/Theme.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/variables.js -o ./theme/variables.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/theme/fonts.css -o ./theme/fonts.css 
+# - ui
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/index.js -o ./components/ui/index.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Box.js -o ./components/ui/Box.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Div.js -o ./components/ui/Div.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Flex.js -o ./components/ui/Flex.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Form.js -o ./components/ui/Form.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/FullWidthImg.js -o ./components/ui/FullWidthImg.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Grid.js -o ./components/ui/Grid.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/H1.js -o ./components/ui/H1.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/H2.js -o ./components/ui/H2.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/H3.js -o ./components/ui/H3.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/H4.js -o ./components/ui/H4.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Hr.js -o ./components/ui/Hr.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/HSpacer.js -o ./components/ui/HSpacer.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Icon.js -o ./components/ui/Icon.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Img.js -o ./components/ui/Img.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Label.js -o ./components/ui/Label.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Link.js -o ./components/ui/Link.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/ResponsiveContent.js -o ./components/ui/ResponsiveContent.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/ResponsiveContentSvg.js -o ./components/ui/ResponsiveContentSvg.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Span.js -o ./components/ui/Span.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Table.js -o ./components/ui/Table.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Td.js -o ./components/ui/Td.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Text.js -o ./components/ui/Text.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/TextError.js -o ./components/ui/TextError.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/Tr.js -o ./components/ui/Tr.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/components/ui/VSpacer.js -o ./components/ui/VSpacer.js
 # - other
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/App.js -o ./App.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/index.js -o ./index.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/routes.js -o ./routes.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/routesComponent.js -o ./routesComponent.js

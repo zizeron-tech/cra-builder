@@ -1,14 +1,18 @@
 import React from 'react';
 
-import Routes from './routes';
+import GlobalStyle from './theme/globalStyle';
+import RoutesComponent from './routesComponent';
 
-import './scss/base/index.scss';
+import Theme from './theme/Theme'
 
 function App() {
   return (
-    <div>
-      <Routes/>
-    </div>
+    <Theme>
+      <div>
+        <GlobalStyle />
+        <RoutesComponent/>
+      </div>
+    </Theme>
   );
 }
 

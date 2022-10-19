@@ -1,19 +1,19 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import styled from 'styled-components';
 
-import { setLanguage } from '../../../redux/actions/languageActions';
+import { H2 } from '../../ui/';
 
-import './Footer.scss';
+const FooterContainer = styled.footer`
+  background-color: ${(props) => props.theme.colors.grey70};
+  // footer's style
+`;
 
 const Footer = () => {
-  const dispatch = useDispatch();
 
   return (
-    <footer>
-      <div>Footer</div>
-      <button onClick={() => dispatch(setLanguage('es'))}>ES</button>
-      <button onClick={() => dispatch(setLanguage('en'))}>ES</button>
-    </footer>
+    <FooterContainer>
+      <H2>Footer</H2>
+    </FooterContainer>
   )
 }
  
