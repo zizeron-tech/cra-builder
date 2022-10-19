@@ -1,15 +1,13 @@
 fs = require('fs');
-const appName = process.argv[2]; 
-const profile = process.argv[3] || 'iamtech';
 
-const deployStaging = 'npm run build:staging && aws s3 --profile '+profile+' sync build/ s3://app-'+appName+'-staging';
+const deployStaging = 'npm run build:staging';
 
 fs.writeFile('./deploy-staging.sh', deployStaging, function(error) {
   if (error) console.log("error", error)
   else console.log("Staging deploy script written"); 
 });
 
-const deployProd = 'npm run build:prod && aws s3 --profile '+profile+' sync build/ s3://app-'+appName+'-prod';
+const deployProd = 'npm run build:prod';
 
 fs.writeFile('./deploy-prod.sh', deployProd, function(error) {
   if (error) console.log("error", error)
