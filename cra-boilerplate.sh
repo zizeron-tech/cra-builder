@@ -1,17 +1,16 @@
 # Create react app with last version
-npx create-react-app app-test $2
+npx create-react-app $1 $2
 
 # Remove unnecessary files
-rm -rf app-test/src/App.js
-rm -rf app-test/src/App.css
-rm -rf app-test/src/App.test.js
-rm -rf app-test/src/Logo.svg
-rm -rf app-test/src/serviceWorker.js
-rm -rf app-test/src/index.css
-rm -rf app-test/.gitignore
+rm -rf $1/src/App.js
+rm -rf $1/src/App.css
+rm -rf $1/src/App.test.js
+rm -rf $1/src/Logo.svg
+rm -rf $1/src/serviceWorker.js
+rm -rf $1/src/index.css
 
 # Install packages
-cd app-test
+cd $1
 npm install --save react-router-dom
 npm install --save-dev styled-components styled-system env-cmd
 
@@ -22,7 +21,7 @@ rm ./environments.js
 
 # Download and execute devops creation script
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/scripts/devops.js
-node ./devops.js app-test $2
+node ./devops.js $1 $2
 rm ./devops.js
 
 # Download enviroment files
@@ -30,10 +29,13 @@ curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-e
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/enviroments/.env.staging
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/enviroments/.env.prod
 
+# Add new exclusions to .gitignore
+echo "" >> .gitignore
+echo "# cra-builder" >> .gitignore
+echo "/test-gitignore" >> .gitignore
+
 # Download and copy app template
 cd src
-# - gitignore
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/.gitignore -o ./.gitignore.js
 # - components/layout/Footer
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/components/layout/Footer/index.js -o ./components/layout/Footer/index.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/components/layout/Footer/Footer.js -o ./components/layout/Footer/Footer.js
