@@ -1,16 +1,16 @@
 # Create react app with last version
-npx create-react-app test-app $2
+npx create-react-app build-test $2
 
 # Remove unnecessary files
-rm -rf test-app/src/App.js
-rm -rf test-app/src/App.css
-rm -rf test-app/src/App.test.js
-rm -rf test-app/src/Logo.svg
-rm -rf test-app/src/serviceWorker.js
-rm -rf test-app/src/index.css
+rm -rf build-test/src/App.js
+rm -rf build-test/src/App.css
+rm -rf build-test/src/App.test.js
+rm -rf build-test/src/Logo.svg
+rm -rf build-test/src/serviceWorker.js
+rm -rf build-test/src/index.css
 
 # Install packages
-cd test-app
+cd build-test
 npm install --save react-router-dom
 npm install --save-dev styled-components styled-system env-cmd
 
@@ -21,7 +21,7 @@ rm ./environments.js
 
 # Download and execute devops creation script
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/scripts/devops.js
-node ./devops.js test-app $2
+node ./devops.js build-test $2
 rm ./devops.js
 
 # Download enviroment files
@@ -49,7 +49,7 @@ curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builde
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/theme/responsiveness.js -o ./theme/responsiveness.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/theme/Theme.js -o ./theme/Theme.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/theme/variables.js -o ./theme/variables.js
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/theme/fonts.css-o ./theme/fonts.css 
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/theme/fonts.css -o ./theme/fonts.css 
 # - ui
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/components/ui/index.js -o ./components/ui/index.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/components/ui/Box.js -o ./components/ui/Box.js
