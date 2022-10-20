@@ -89,3 +89,4 @@ curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builde
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/App.js -o ./App.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/index.js -o ./index.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/routesComponent.js -o ./routesComponent.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/translations.js -o ./translations.js

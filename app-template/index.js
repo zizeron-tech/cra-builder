@@ -2,7 +2,7 @@ import React from 'react';
 import * as ReactDOMClient from 'react-dom/client';
 import { TranslationsProvider } from '@bit/iamtechnologies.translations.translations';
 
-import Theme from '../test-app/src/theme/Theme';
+import Theme from './theme/Theme';
 
 import TRANSLATIONS from './translations';
 
