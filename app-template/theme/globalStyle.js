@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { variables } from './variables';
-import { mixins } from './mixins';
+import variables from './variables';
+import mixins from './mixins';
 
 import './fonts.css';
 
@@ -64,5 +64,5 @@ const GlobalStyle = createGlobalStyle`
   }
 
 `;
- 
+
 export default GlobalStyle;
