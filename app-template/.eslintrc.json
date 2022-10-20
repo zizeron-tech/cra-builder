@@ -19,6 +19,7 @@
     "react", "react-hooks"
   ],
   "rules": {
+    "react/function-component-definition": "off",
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react/prop-types": "off",

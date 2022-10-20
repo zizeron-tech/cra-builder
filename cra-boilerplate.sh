@@ -1,16 +1,16 @@
 # Create react app with last version
-npx create-react-app test-app $2
+npx create-react-app $1 $2
 
 # Remove unnecessary files
-rm -rf test-app/src/App.js
-rm -rf test-app/src/App.css
-rm -rf test-app/src/App.test.js
-rm -rf test-app/src/Logo.svg
-rm -rf test-app/src/serviceWorker.js
-rm -rf test-app/src/index.css
+rm -rf $1/src/App.js
+rm -rf $1/src/App.css
+rm -rf $1/src/App.test.js
+rm -rf $1/src/Logo.svg
+rm -rf $1/src/serviceWorker.js
+rm -rf $1/src/index.css
 
 # Install packages
-cd test-app
+cd $1
 npm install --save react-router-dom styled-components styled-system
 npm install --save-dev eslint eslint-plugin-react eslint-config-airbnb @babel/eslint-parser env-cmd
 
@@ -21,7 +21,7 @@ rm ./environments.js
 
 # Download and execute devops creation script
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/scripts/devops.js
-node ./devops.js test-app $2
+node ./devops.js $1 $2
 rm ./devops.js
 
 # Download enviroment files
