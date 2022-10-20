@@ -35,7 +35,7 @@ echo "# cra-builder" >> .gitignore
 echo "/test-gitignore" >> .gitignore
 
 # Add eslint config
-curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/.eslintrc -o ./.eslintrc
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/app-template/.eslintrc.json -o ./.eslintrc.json
 
 # Download and copy app template
 cd src
