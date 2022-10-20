@@ -1,9 +1,9 @@
 import React from 'react';
 
-import GlobalStyle from '../test-app/src/theme/globalStyle';
+import GlobalStyle from './theme/globalStyle';
 import RoutesComponent from './routesComponent';
 
-import Theme from '../test-app/src/theme/Theme';
+import Theme from './theme/Theme';
 
 function App() {
   return (
