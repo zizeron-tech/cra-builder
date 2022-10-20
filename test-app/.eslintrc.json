@@ -14,7 +14,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "parser": "@babel/eslint-parser",
+  "parser": "babel-eslint",
   "plugins": [
     "react", "react-hooks"
   ],

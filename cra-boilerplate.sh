@@ -11,8 +11,8 @@ rm -rf test-app/src/index.css
 
 # Install packages
 cd test-app
-npm install --save react-router-dom eslint
-npm install --save-dev styled-components styled-system env-cmd
+npm install --save react-router-dom styled-components styled-system
+npm install --save-dev eslint eslint-plugin-react eslint-config-airbnb @babel/eslint-parser env-cmd
 
 # Download and execute package.json overrides for run and build scripts
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/develop-eugenio/scripts/environments.js
