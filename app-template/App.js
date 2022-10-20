@@ -1,18 +1,14 @@
 import React from 'react';
 
-import GlobalStyle from './theme/globalStyle';
-import RoutesComponent from './routesComponent';
-
-import Theme from './theme/Theme';
+import GlobalStyle from '../test-app/src/theme/globalStyle';
+import RoutesComponent from '../test-app/src/routesComponent';
 
 function App() {
   return (
-    <Theme>
-      <div>
-        <GlobalStyle />
-        <RoutesComponent />
-      </div>
-    </Theme>
+    <div>
+      <GlobalStyle />
+      <RoutesComponent />
+    </div>
   );
 }
 

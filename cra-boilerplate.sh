@@ -11,7 +11,7 @@ rm -rf $1/src/index.css
 
 # Install packages
 cd $1
-npm install --save react-router-dom styled-components styled-system
+npm install --save react-router-dom styled-components styled-system @bit/iamtechnologies.translations.translations
 npm install --save-dev eslint eslint-plugin-react eslint-config-airbnb @babel/eslint-parser env-cmd
 
 # Download and execute package.json overrides for run and build scripts
