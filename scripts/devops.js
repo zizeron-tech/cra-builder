@@ -1,13 +1,5 @@
 fs = require('fs');
 
-const deployProd = 'npm run build:prod';
-
-fs.writeFile('./deploy-prod.sh', deployProd, function(error) {
-  if (error) console.log("error", error)
-  else console.log("Production deploy script written"); 
-});
-
-
 const startLocal = 'npm run start:local';
 
 fs.writeFile('./start-local.sh', startLocal, function(error) {
