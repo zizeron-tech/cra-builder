@@ -37,6 +37,9 @@ echo "/test-gitignore" >> .gitignore
 # Add eslint config
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/.eslintrc.json -o ./.eslintrc.json
 
+# Add eslint config
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/.gitignore -o ./.gitignore
+
 # Download and copy app template
 cd src
 # - components/layout/Footer
