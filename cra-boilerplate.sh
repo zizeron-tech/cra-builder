@@ -29,11 +29,6 @@ curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/en
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/enviroments/.env.staging
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/enviroments/.env.prod
 
-# Add new exclusions to .gitignore
-echo "" >> .gitignore
-echo "# cra-builder" >> .gitignore
-echo "/test-gitignore" >> .gitignore
-
 # Add eslint config
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/.eslintrc.json -o ./.eslintrc.json
 
