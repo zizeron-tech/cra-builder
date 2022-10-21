@@ -1,26 +1,5 @@
 const mixins = {
   /*
-    MEDIA QUERY MANAGER
-
-    Breakpoint       Device ($breakpoint)
-    -------------  | --------------
-    0 - 600px      | Phone (phone)
-    600px - 900px  | Tablet portrait (tab-port)
-    900px - 1200px | Tablet landscape (tab-land)
-    [1200 - 1800]: | Normal styles
-    1800px - ∞:    | Big desktop (big-desktop)
-
-    1em = 16px
-  */
-
-  breakpoints: {
-    phone: 'max-width: 37.5em',
-    tabPort: 'max-width: 56.25em',
-    tabLand: 'max-width: 75em',
-    bigDesktop: 'min-width: 112.5em',
-  },
-
-  /*
   Hiding scrollbars mixins:
     scrollXContainer: parent element
     scrollXContained: Child element

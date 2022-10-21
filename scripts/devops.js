@@ -1,12 +1,5 @@
 fs = require('fs');
 
-const deployStaging = 'npm run build:staging';
-
-fs.writeFile('./deploy-staging.sh', deployStaging, function(error) {
-  if (error) console.log("error", error)
-  else console.log("Staging deploy script written"); 
-});
-
 const deployProd = 'npm run build:prod';
 
 fs.writeFile('./deploy-prod.sh', deployProd, function(error) {
