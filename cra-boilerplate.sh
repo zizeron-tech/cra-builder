@@ -11,7 +11,8 @@ rm -rf $1/src/index.css
 
 # Install packages
 cd $1
-yarn add react-router-dom styled-components styled-system @bit/iamtechnologies.translations.translations eslint eslint-plugin-react eslint-config-airbnb @babel/eslint-parser env-cmd
+yarn add react-router-dom styled-components styled-system @bit/iamtechnologies.translations.translations 
+yarn add --dev eslint eslint-plugin-react eslint-config-airbnb @babel/eslint-parser env-cmd
 
 # Download and execute package.json overrides for run and build scripts
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/scripts/environments.js
