@@ -6,7 +6,6 @@ const reactScripts = {
   'start:local': 'env-cmd -f .env.local react-scripts start',
   'start:staging': 'env-cmd -f .env.staging react-scripts start',
   'start:prod': 'env-cmd -f .env.prod react-scripts start',
-  'build:local': 'env-cmd -f .env.local react-scripts build',
   test: 'react-scripts test',
   eject: 'react-scripts eject'
 }
