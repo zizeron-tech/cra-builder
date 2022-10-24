@@ -35,6 +35,9 @@ curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builde
 # Add eslint config
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/.gitignore -o ./.gitignore
 
+# Add npm config
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/.npmrc -o ./.npmrc
+
 # Download and copy app template
 cd src
 # - components/layout/Footer
