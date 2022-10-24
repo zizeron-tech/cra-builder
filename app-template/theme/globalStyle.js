@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import variables from './variables';
-import mixins from './mixins';
+import { device } from './responsiveness';
 
 import './fonts.css';
 
@@ -40,15 +40,15 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-   @media (${mixins.breakpoints.tabLand}) {
+   @media (${device.mobileL}) {
       font-size: 56.25%; // 1 rem = 9px; 9px/16px = 56.25%
     }
 
-    @media (${mixins.breakpoints.tabPort}) {
+    @media (${device.tablet}) {
       font-size: 50%; // 1 rem = 8px; 8px/16px = 50%
     }
 
-    @media (${mixins.breakpoints.bigDesktop}) {
+    @media (${device.laptop}) {
       font-size: 75%; // 1 rem = 12px; 12px/16px = 75%
     }
   }
