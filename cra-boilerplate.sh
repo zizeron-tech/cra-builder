@@ -11,8 +11,8 @@ rm -rf $1/src/index.css
 
 # Install packages
 cd $1
-npm install --save react-router-dom
-npm install --save-dev styled-components styled-system env-cmd
+npm install --save react-router-dom styled-components styled-system @bit/iamtechnologies.translations.translations
+npm install --save-dev eslint eslint-plugin-react eslint-config-airbnb @babel/eslint-parser env-cmd
 
 # Download and execute package.json overrides for run and build scripts
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/scripts/environments.js
@@ -28,6 +28,12 @@ rm ./devops.js
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/enviroments/.env.local
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/enviroments/.env.staging
 curl -O https://raw.githubusercontent.com/iam-technologies/cra-builder/master/enviroments/.env.prod
+
+# Add eslint config
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/.eslintrc.json -o ./.eslintrc.json
+
+# Add eslint config
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/.gitignore -o ./.gitignore
 
 # Download and copy app template
 cd src
@@ -81,3 +87,4 @@ curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builde
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/App.js -o ./App.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/index.js -o ./index.js
 curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/routesComponent.js -o ./routesComponent.js
+curl --create-dirs https://raw.githubusercontent.com/iam-technologies/cra-builder/master/app-template/translations.js -o ./translations.js

@@ -8,14 +8,12 @@ const LayoutContainer = styled.div`
   // layout's style
 `;
 
-const Layout = ({ children }) => {
-  return (
-    <LayoutContainer>
-      <Header/>
-      {children}
-      <Footer />
-    </LayoutContainer>
-  )
-}
- 
+const Layout = ({ children }) => (
+  <LayoutContainer>
+    <Header />
+    {children}
+    <Footer />
+  </LayoutContainer>
+);
+
 export default Layout;

@@ -1,5 +1,7 @@
-export const variables = {
+const variables = {
   fonts: {
-    primaryFont: `"Lato", sans-serif`,
-  }
+    primaryFont: '"Lato", sans-serif',
+  },
 };
+
+export default variables;
